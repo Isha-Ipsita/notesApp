@@ -1,0 +1,19 @@
+{
+  "name": "quicknotes",
+  "version": "1.0.0",
+  "description": "A personalized note-taking app built with React and Spring Boot",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd client && npm install && npm run build",
+    "server": "cd server/Notes && ./mvnw package && java -jar target/Notes-0.0.1-SNAPSHOT.jar",
+    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
+    "dev-client": "cd client && npm start",
+    "dev-server": "cd server/Notes && ./mvnw spring-boot:run"
+  },
+  "author": "Isha Ipsita",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
